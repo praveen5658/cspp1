@@ -10,7 +10,7 @@ def main():
     ma_x = 0
     co_u = 0
     for i_v in range(len(st_r)-1):
-        if st_r[i_v] < st_r[i_v+1]:
+        if st_r[i_v] <= st_r[i_v+1]:
             co_u += 1
             st_r1 += st_r[i_v+1]
         else:
