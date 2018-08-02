@@ -1,3 +1,8 @@
+'''
+@author Praveen
+@date 02-08-2018
+'''
+
 VARA = "hello"
 VARB = "world"
 if(isinstance(VARA) == str or isinstance(VARB) == str):
