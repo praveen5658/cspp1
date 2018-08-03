@@ -8,7 +8,7 @@ def main():
     s_t = int(input())
     epsi_lon = 0.01
     gu_ess = 0.0
-    incre_ment = 0.01
+    incre_ment = 0.1
     while abs(gu_ess**2 - s_t) >= epsi_lon:
         if gu_ess <= s_t:
             gu_ess += incre_ment
