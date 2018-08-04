@@ -9,7 +9,8 @@ def main():
     nu_m = int(input())
     for i in range(1, nu_m+1):
         if i % 3 == 0 and i % 5 == 0:
-            print("FizzBuzz")
+            print("Fizz")
+            print("Buzz")
         elif i % 5 == 0:
             print("Buzz")
         elif i % 3 == 0:
