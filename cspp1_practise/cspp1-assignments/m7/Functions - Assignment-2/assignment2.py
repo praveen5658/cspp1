@@ -7,9 +7,9 @@ def paying_debt_off_in_a_year(balance, annual_interest_rate):
     monthly_interest_rate = annual_interest_rate/12
     monthly_payment = 0
     newbalance = balance
-    while newbalance >= 0:
+    while newbalance > 0:
         monthly_payment += 10
-        newbalance = balance  
+        newbalance = balance
         month = 1
         while month <= 12 and newbalance > 0:
             newbalance -= monthly_payment
@@ -23,5 +23,5 @@ def main():
     data = data.split(' ')
     data = list(map(float, data))
     paying_debt_off_in_a_year(data[0], data[1])
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
