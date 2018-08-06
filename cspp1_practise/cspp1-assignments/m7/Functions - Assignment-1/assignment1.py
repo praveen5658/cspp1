@@ -4,9 +4,9 @@ Date : 06-08-2018
 '''
 
 def paying_debt_off_inayear(balance_unpaid, annual_interest_rate, monthly_payment_rate):
-    '''This function calculates the remaining balance '''
+    '''to calculate remaining balance'''
     balance_copy = balance_unpaid
-	iterator_i = 1
+    iterator_i = 1
     while iterator_i <= 12:
         montly_interest_rate = annual_interest_rate / 12.0
         minimum_monthly_payment = monthly_payment_rate*balance_copy
@@ -15,7 +15,7 @@ def paying_debt_off_inayear(balance_unpaid, annual_interest_rate, monthly_paymen
         iterator_i += 1
     return "Remaining balance: "+str(round(balance_copy, 2))
 def main():
-    '''This is main function'''
+    '''main function'''
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
@@ -23,3 +23,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
