@@ -39,3 +39,4 @@ def main():
     print(paying_debt_off_inayear(data[0], data[1]))
 if __name__ == "__main__":
     main()
+    
