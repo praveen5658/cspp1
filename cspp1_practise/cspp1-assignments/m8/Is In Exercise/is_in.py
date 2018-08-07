@@ -14,9 +14,9 @@ def is_in(char, sort_str):
     global MID_VALUE
     MID_VALUE = (LOW_VALUE + HIGH_VALUE) // 2
     if sort_str[MID_VALUE] == char:
-        return 1
+        return "True"
     elif MID_VALUE in (HIGH_VALUE, LOW_VALUE):
-        return 0
+        return "False"
     else:
         if sort_str[MID_VALUE] < char:
             LOW_VALUE = MID_VALUE
