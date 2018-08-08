@@ -44,8 +44,6 @@ def main():
     list1 = []
     for j in range(1, len(data)):
         list1.append(data[j][0])
-    print(secret_word)
-    print(list1)
     print(is_word_guessed(secret_word, list1))
 
 if __name__ == "__main__":
