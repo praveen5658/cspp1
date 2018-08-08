@@ -40,7 +40,7 @@ def main():
     for j in range(1, len(data)):
         list1.append(data[j][0])
     if secret_word == "":
-        print(True)
+        print("")
     else:
         print(''.join(get_guessed_word(secret_word, list1)))
 
