@@ -12,15 +12,15 @@ def get_guessed_word(secret_word, letters_guessed):
     returns: string, comprised of letters and underscores that represents
       what letters in secret_word have been guessed so far.
     '''
-    cou = 0
     li_st1 = list(secret_word)
     li_st2 = list(secret_word)
     li_st3 = list(secret_word)
+    le_n = len(li_st1)
     for va_r in letters_guessed:
-        for va_r1 in range(len(li_st1)):
+        for va_r1 in range(le_n):
             if li_st1[va_r1] == va_r:
                 li_st2[va_r1] = '_'
-    for i in range(len(li_st3)):
+    for i in range(le_n):
         if li_st2[i] != '_':
             li_st3[i] = '_'
     return li_st3
