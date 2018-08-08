@@ -15,19 +15,16 @@ def is_word_guessed(secret_word, letters_guessed):
       False otherwise
     '''
     cou = 0
-    l1 = list(secret_word)
-    l2 = list(secret_word)
+    li_st1 = list(secret_word)
+    li_st2 = list(secret_word)
     for va_r in letters_guessed:
-        for va_r1 in l1:
-            if va_r1 == va_r: 
-                l2.remove(va_r)
-        if len(l2) == 0:
+        for va_r1 in li_st1:
+            if va_r1 == va_r:
+                li_st2.remove(va_r)
+        if len(li_st2) is 0:
             cou = 1
             break
-    if cou == 1:
-        return True
-    else:
-        return False
+    return bool(cou)
 
 
 def main():
