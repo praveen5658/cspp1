@@ -1,6 +1,6 @@
 '''
 Author : Praveen
-Date : 07-08-2018
+Date : 08-08-2018
 '''
 def odd_tuples(input_tup):
     '''
