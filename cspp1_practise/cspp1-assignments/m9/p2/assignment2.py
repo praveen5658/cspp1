@@ -17,7 +17,7 @@ def get_guessed_word(secret_word, letters_guessed):
     li_st2 = list(secret_word)
     for va_r in letters_guessed:
         for va_r1 in range(len(li_st1)):
-            if li_st1[va_r1] == va_r:
+            if li_st1[va_r1] != va_r:
                 li_st2[va_r1] = '_'
     return li_st2
 
