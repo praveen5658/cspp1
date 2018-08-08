@@ -18,12 +18,12 @@ def is_word_guessed(secret_word, letters_guessed):
     l1 = list(secret_word)
     l2 = list(secret_word)
     for va_r in letters_guessed:
-        if len(l2) == 0:
-            cou = 1
-            break
         for va_r1 in l1:
             if va_r1 == va_r: 
                 l2.remove(va_r)
+        if len(l2) == 0:
+            cou = 1
+            break
     if cou == 1:
         return True
     else:
