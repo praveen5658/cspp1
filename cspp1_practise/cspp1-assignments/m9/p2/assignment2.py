@@ -15,11 +15,15 @@ def get_guessed_word(secret_word, letters_guessed):
     cou = 0
     li_st1 = list(secret_word)
     li_st2 = list(secret_word)
+    li_st3 = list(secret_word)
     for va_r in letters_guessed:
         for va_r1 in range(len(li_st1)):
             if li_st1[va_r1] == va_r:
                 li_st2[va_r1] = '_'
-    return li_st2
+    for i in range(len(li_st3)):
+        if li_st2[i] != '_':
+            li_st3[i] = '_'
+    return li_st3
 
 def main():
     '''
