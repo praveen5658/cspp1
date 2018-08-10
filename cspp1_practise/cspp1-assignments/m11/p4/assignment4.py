@@ -12,7 +12,7 @@ def calculatehandlen(hand):
     count = 0
     for ke_y in hand:
         if hand[ke_y] > 0:
-            count += 1
+            count += hand[ke_y]
     return count
 
 def main():
