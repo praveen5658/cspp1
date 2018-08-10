@@ -23,17 +23,16 @@ def isValidWord(word, hand, wordList):
 
 
 def main():
-    word=input()
-    nu_m=int(input())
-    adict={}
+    word = input()
+    nu_m = int(input())
+    adict = {}
     for ite_r in range(nu_m):
-        data=input()
-        spl_it=data.split()
-        adict[spl_it[0]]=int(spl_it[1])
+        data = input()
+        spl_it = data.split()
+        adict[spl_it[0]] = int(spl_it[1])
         ite_r += 1
-    l_2=input().split()
-    print(isValidWord(word,adict,l_2))
-        
+    l_2 = input().split()
+    print(isValidWord(word, adict, l_2))
 
 
 if __name__ == "__main__":
