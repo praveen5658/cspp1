@@ -3,7 +3,7 @@ Author : Praveen
 Date : 10-08-2018
 '''
 
-def updateHand(hand, word):
+def updatehand(hand, word):
     """
     Assumes that 'hand' has all the letters in word.
     In other words, this assumes that however many times
@@ -26,14 +26,15 @@ def updateHand(hand, word):
 
 def main():
     '''This is main function'''
-    n = input()
+    nu_m = input()
     adict = {}
-    for i in range(int(n)):
+    for lo_op in range(int(nu_m)):
         data = input()
-        l = data.split()
-        adict[l[0]] = int(l[1])
+        sp_lit = data.split()
+        adict[sp_lit[0]] = int(sp_lit[1])
+        lo_op += 1
     data1 = input()
-    print(updateHand(adict,data1))
+    print(updatehand(adict,data1))
 
 
 if __name__ == "__main__":
