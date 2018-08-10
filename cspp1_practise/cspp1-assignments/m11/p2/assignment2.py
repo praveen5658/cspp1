@@ -22,7 +22,7 @@ def updateHand(hand, word):
     for lo_op in word:
         if lo_op in hand:
             hand[lo_op] -=1
-    return hand.keys()
+    return hand
 
 def main():
     '''This is main function'''
