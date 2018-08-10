@@ -4,13 +4,16 @@ Date : 10-08-2018
 '''
 
 def calculatehandlen(hand):
-    """ 
+    """
     Returns the length (number of letters) in the current hand.
-    
     hand: dictionary (string int)
     returns: integer
     """
-    return len(hand)
+    count = 0
+    for ke_y in hand:
+        if hand[ke_y] > 0:
+            count += 1
+    return count
 
 def main():
     '''This is main function'''
@@ -20,6 +23,7 @@ def main():
         data = input()
         spl_it = data.split()
         adict[spl_it[0]] = int(spl_it[1])
+        lo_op += 1
     print(calculatehandlen(adict))
 
 
