@@ -34,7 +34,7 @@ def main():
         adict[sp_lit[0]] = int(sp_lit[1])
         lo_op += 1
     data1 = input()
-    print(updatehand(adict,data1))
+    print(updatehand(adict, data1))
 
 
 if __name__ == "__main__":
