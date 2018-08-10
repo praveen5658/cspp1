@@ -22,7 +22,6 @@ def updateHand(hand, word):
     for lo_op in word:
         if lo_op in hand:
             hand[lo_op] -=1
-    for lo_op in hand:
         if hand[lo_op] == 0:
             del hand[lo_op]
     return ''.join(hand.keys())
