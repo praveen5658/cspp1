@@ -18,7 +18,7 @@ def isValidWord(word, hand, wordList):
     for lo_op in word:
         if lo_op in hand:
             count += 1
-    return bool(count == le_n && word in wordList)
+    return bool(count == le_n and word in wordList)
 
 
 
