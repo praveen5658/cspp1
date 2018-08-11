@@ -36,14 +36,14 @@ def create_social_network(data):
 
     input_list = data.splitlines()
     dictionary = {}
-    le_n = len(input_list)
-    for va_r in input_list:
-        li_st = va_r.split(' follows ')
-        li_st2 = li_st[1].split(',')
-        if li_st[0] in dictionary:
-            dictionary[li_st[0]].append(li_st2)
-        else:
-            dictionary[li_st[0]] = li_st2
+    if 'follows' in input_list:
+        for va_r in input_list:
+            li_st = va_r.split(' follows ')
+            li_st2 = li_st[1].split(',')
+            if li_st[0] in dictionary:
+                dictionary[li_st[0]].append(li_st2)
+            else:
+                dictionary[li_st[0]] = li_st2
     return dictionary
 
 
