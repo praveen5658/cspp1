@@ -15,7 +15,7 @@ def is_straight(hand):
     '''
     le_n = len(hand)
     forward_sequence = 'A123456789TJQKA'
-    backward_sequence = 'AKQJT987654321A'
+    # backward_sequence = 'AKQJT987654321A'
     dictionary = {'2':0, '3':1, '4':2, '5':3, '6':4, '7':5, '8':6, '9':7, 'T':8, 'J':9, 'Q':10, 'K':11, 'A':12}
     st_r = ""
     st_r1 = ""
@@ -32,7 +32,7 @@ def is_straight(hand):
     			st_r += lo_op
     print(st_r)
     for lo_op in range(11):
-        if forward_sequence[lo_op:lo_op + 5] == st_r or backward_sequence[lo_op:lo_op + 5]:
+        if forward_sequence[lo_op:lo_op + 5] == st_r:
             return 1
     if st_r[0] == '2' and st_r[4] == 'A':
     	return 1 
