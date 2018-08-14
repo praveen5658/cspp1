@@ -22,7 +22,7 @@ def is_straight(hand):
     '''for lo_op in range(le_n):
         st_r += hand[lo_op][0]
         st_r1 += dictionary[hand[lo_op][0]]'''
-    l = list(int(st_r1)).sort()
+    # l = list(int(st_r1)).sort()
     '''for lo_op in range(11):
         if forward_sequence[lo_op:lo_op + 5] == st_r or backward_sequence[lo_op:lo_op + 5]:
             return 1'''
