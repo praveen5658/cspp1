@@ -27,7 +27,7 @@ def is_straight(hand):
         if forward_sequence[lo_op:lo_op + 5] == st_r or backward_sequence[lo_op:lo_op + 5]:
             return 1'''
     for lo_op in dictionary:
-    	for lo_op1 in hand[lo_op1][0]:
+    	for lo_op1 in range(le_n):
     		if hand[lo_op1][0] == lo_op:
     			st_r += lo_op
     for lo_op in range(11):
