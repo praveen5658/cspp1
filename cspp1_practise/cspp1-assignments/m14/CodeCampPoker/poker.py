@@ -15,24 +15,14 @@ def is_straight(hand):
     '''
     le_n = len(hand)
     forward_sequence = 'A123456789TJQKA'
-    # backward_sequence = 'AKQJT987654321A'
     dictionary = {
         '2':0, '3':1, '4':2, '5':3, '6':4, '7':5, '8':6, '9':7, 'T':8, 'J':9,
         'Q':10, 'K':11, 'A':12}
     st_r = ""
-    # st_r1 = ""
-    '''for lo_op in range(le_n):
-        st_r += hand[lo_op][0]
-        st_r1 += dictionary[hand[lo_op][0]]'''
-    # l = list(int(st_r1)).sort()
-    '''for lo_op in range(11):
-        if forward_sequence[lo_op:lo_op + 5] == st_r or backward_sequence[lo_op:lo_op + 5]:
-            return 1'''
     for lo_op in dictionary:
         for lo_op1 in range(le_n):
             if hand[lo_op1][0] == lo_op:
                 st_r += lo_op
-    # print(st_r)
     for lo_op in range(11):
         if forward_sequence[lo_op:lo_op + 5] == st_r:
             return 1
