@@ -30,7 +30,7 @@ def is_straight(hand):
     	for lo_op1 in range(le_n):
     		if hand[lo_op1][0] == lo_op:
     			st_r += lo_op
-    print(st_r)
+    # print(st_r)
     for lo_op in range(11):
         if forward_sequence[lo_op:lo_op + 5] == st_r:
             return 1
