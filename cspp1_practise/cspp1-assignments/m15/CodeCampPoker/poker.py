@@ -69,10 +69,13 @@ def is_of_pair(hand):
         else:
             dictionary[lo_op[0]] = 1
     l_1 = sorted(list(dictionary.values()))
+    l_2 = sorted(list(dictionary.keys()))
     if l_1[-1] == 2 and l_1[-2] == 2:
         return 7*10
     if l_1[-1] == 2:
-        nu_m = int(l_1[-1])
+        for k_ey in l_2:
+            if dictionary[k_ey] == 2:
+                nu_m = int(k_ey)
         return 80+nu_m
     return 100
 def is_full_house(hand):
