@@ -11,7 +11,7 @@ def is_straight(hand):
         Do we need both the characters in the string? No.
         The first character is good enough to determine a straight
         Think of an algorithm: given the card face value how to check if it a straight
-        Write the code for it and return True if it is a straight else return False
+        Write the code for it and  return True if it is a straight else return False
     '''
     le_n = len(hand)
     forward_sequence = 'A123456789TJQKA'
@@ -114,7 +114,7 @@ def hand_rank(hand):
     '''
     ra_nk = is_of_kind(hand)
     pair_rank = is_of_pair(hand)
-    (straight_value,st_r) = is_straight(hand)
+    (straight_value, st_r) = is_straight(hand)
     if straight_value and is_flush(hand) and st_r == "TJQKA":
         return 9
     if straight_value and is_flush(hand):
