@@ -109,6 +109,7 @@ def hand_rank(hand):
     if is_straight(hand):
         return 5
     if ra_nk == 3:
+        print(6)
         return 6
     if pair_rank == 2:
         return 7
