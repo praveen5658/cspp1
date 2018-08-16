@@ -129,7 +129,7 @@ def hand_rank(hand):
         print(hand)
         print(8)
         return 8
-    return 0
+    return 10
 
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
