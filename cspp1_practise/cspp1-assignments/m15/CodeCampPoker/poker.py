@@ -116,6 +116,7 @@ def hand_rank(hand):
     ra_nk = is_of_kind(hand)
     pair_rank = is_of_pair(hand)
     if is_straight(hand) and is_flush(hand):
+        print(10)
         return 1*10
     if ra_nk == 4:
         return 2*10
