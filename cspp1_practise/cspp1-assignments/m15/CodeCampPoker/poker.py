@@ -26,6 +26,7 @@ def is_straight(hand):
     for lo_op in range(11):
         if forward_sequence[lo_op:lo_op + 5] == st_r:
             return True
+    print(st_r)
     if st_r == "2345A":
         return True
     return False
