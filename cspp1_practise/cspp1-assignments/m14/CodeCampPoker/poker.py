@@ -98,20 +98,28 @@ def hand_rank(hand):
     ra_nk = is_of_kind(hand)
     pair_rank = is_of_pair(hand)
     if is_straight(hand) and is_flush(hand):
+        print(1)
         return 1
     if ra_nk == 4:
+        print(2)
         return 2
     if is_full_house(hand):
+        print(3)
         return 3
     if is_flush(hand):
+        print(4)
         return 4
     if is_straight(hand):
+        print(5)
         return 5
     if ra_nk == 3:
+        print(6)
         return 6
     if pair_rank == 2:
+        print(7)
         return 7
     if pair_rank == 1:
+        print(8)
         return 8
     return 0
 
