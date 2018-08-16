@@ -97,7 +97,7 @@ def max_face_count(hand):
     '''This will check the condition full house'''
     dictionary = {'A':0}
     l_1 = list("KQJA")
-    print(l_1)
+    print(hand)
     for lo_op in hand:
         if lo_op[0] in ('A', 'K', 'Q', 'J'):
             dictionary[lo_op[0]] += 1
