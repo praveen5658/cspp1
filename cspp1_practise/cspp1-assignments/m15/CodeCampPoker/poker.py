@@ -112,6 +112,7 @@ def hand_rank(hand):
     if ra_nk == 3:
         return 6*10
     if pair_rank != 100:
+        print(pair_rank)
         return pair_rank
     return 100
 
