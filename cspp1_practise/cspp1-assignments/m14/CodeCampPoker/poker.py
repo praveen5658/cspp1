@@ -63,7 +63,6 @@ def is_of_kind(hand):
 def is_of_pair(hand):
     '''This will check the conditions of twp pair and one pair'''
     dictionary = {}
-    co_u = 0
     for lo_op in hand:
         if lo_op[0] in dictionary:
             dictionary[lo_op[0]] += 1
@@ -88,6 +87,7 @@ def is_full_house(hand):
     l_1 = list(dictionary.values())
     if l_1[0] in (2, 3) and l_1[1] in (2, 3):
         return True
+    return False
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
