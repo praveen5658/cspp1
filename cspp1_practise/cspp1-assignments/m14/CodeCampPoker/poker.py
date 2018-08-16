@@ -97,7 +97,7 @@ def hand_rank(hand):
         or a flush or a straight flush.
     '''
     ra_nk = is_of_kind(hand)
-    print(ra_nk)
+    # print(ra_nk)
     pair_rank = is_of_pair(hand)
     if is_straight(hand) and is_flush(hand):
         return 1
@@ -108,6 +108,7 @@ def hand_rank(hand):
     if is_flush(hand):
         return 4
     if is_straight(hand):
+        print(5)
         return 5
     if ra_nk == 3:
         print(6)
