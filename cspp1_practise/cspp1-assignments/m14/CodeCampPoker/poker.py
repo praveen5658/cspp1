@@ -112,6 +112,7 @@ def hand_rank(hand):
         return 7
     if pair_rank == 1:
         return 8
+    return 0
 
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
