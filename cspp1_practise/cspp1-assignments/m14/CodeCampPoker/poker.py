@@ -84,7 +84,7 @@ def is_full_house(hand):
             dictionary[lo_op[0]] = 1
     if len(dictionary) != 2:
         return False
-    l_1 = list[dictionary.values()]
+    l_1 = list(dictionary.values())
     if l_1[0] in (2, 3) and l_1[1] in (2, 3):
         return True
 def hand_rank(hand):
