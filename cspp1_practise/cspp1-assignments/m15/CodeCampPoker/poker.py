@@ -77,7 +77,7 @@ def is_of_pair(hand):
         for k_ey in l_2:
             if dictionary[k_ey] == 2 and k_ey in list("23456789"):
                 nu_m = int(k_ey)
-        return 80+nu_m
+        return 80+(10 - nu_m)
     return 100
 def is_full_house(hand):
     '''This will check the condition full house'''
@@ -116,7 +116,6 @@ def hand_rank(hand):
     if ra_nk == 3:
         return 6*10
     if pair_rank != 100:
-        print(pair_rank)
         return pair_rank
     return 100
 
