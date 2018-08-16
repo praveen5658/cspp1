@@ -99,10 +99,11 @@ def max_face_count(hand):
     l_1 = list("KQJA")
     print(hand)
     for lo_op in hand:
-        if lo_op[0] in ('A', 'K', 'Q', 'J'):
-            dictionary[lo_op[0]] += 1
-        else:
-            dictionary[lo_op[0]] = 1
+        if lo_op[0] in l_1:
+            if lo_op[0] in dictionary:
+                dictionary[lo_op[0]] += 1
+            else:
+                dictionary[lo_op[0]] = 1
     return (len(dictionary.values()), dictionary['A'])
 def hand_rank(hand):
     '''
