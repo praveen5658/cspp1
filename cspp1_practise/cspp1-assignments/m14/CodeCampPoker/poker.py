@@ -98,7 +98,6 @@ def hand_rank(hand):
     '''
     ra_nk = is_of_kind(hand)
     pair_rank = is_of_pair(hand)
-    print(pair_rank)
     if is_straight(hand) and is_flush(hand):
         return 1
     if ra_nk == 4:
