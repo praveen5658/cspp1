@@ -25,10 +25,10 @@ def is_straight(hand):
                 st_r += lo_op
     for lo_op in range(11):
         if forward_sequence[lo_op:lo_op + 5] == st_r:
-            return 1
+            return True
     if st_r[0] == '2' and st_r[4] == 'A':
-        return 1
-    return 0
+        return True
+    return False
 
 def is_flush(hand):
     '''
@@ -43,8 +43,49 @@ def is_flush(hand):
     le_n = len(hand)
     for lo_op in range(le_n):
         if hand[lo_op][1] != ch_ar:
-            return 0
-    return 2
+            return False
+    return True
+
+def is_of_kind(hand):
+    '''This will check the conditions of Four of a kind and three of kind'''
+    dictionary = {}
+    for lo_op in hand:
+        if lo_op[0] in dictionary:
+            dictionary[lo_op[0]] += 1
+        else:
+            dictionary[lo_op[0]] = 1
+    if len(dictionary) != 2:
+        return 0
+    for lo_op in dictionary:
+        if dictionary[lo_op] in (3, 4):
+            return dictionary[lo_op]
+def is_of_pair(hand):
+    '''This will check the conditions of twp pair and one pair'''
+    dictionary = {}
+    co_u = 0
+    for lo_op in hand:
+        if lo_op[0] in dictionary:
+            dictionary[lo_op[0]] += 1
+        else:
+            dictionary[lo_op[0]] = 1
+    if len(dictionary) != 3:
+        return 0
+    for lo_op in dictionary:
+        if dictionary[lo_op] == 2:
+            co_u +=1
+    return co_u
+def is_full_house(hand):
+    '''This will check the condition full house'''
+    dictionary = {}
+    for lo_op in hand:
+        if lo_op[0] in dictionary:
+            dictionary[lo_op[0]] += 1
+        else:
+            dictionary[lo_op[0]] = 1
+    if len(dictionary) != 2:
+        return False
+    if dictionary[0] in (2, 3) and dictionary[1] in (2, 3):
+        return True
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -53,9 +94,24 @@ def hand_rank(hand):
         The first version should identify if the given hand is a straight
         or a flush or a straight flush.
     '''
-    su_m = 0
-    su_m = is_straight(hand) + is_flush(hand)
-    return su_m
+    ra_nk = is_of_kind(hand)
+    pair_rank = is_of_pair(hand)
+    if is_straight(hand) and is_flush(hand):
+        return 1
+    if ra_nk == 4:
+        return 2
+    if is_full_house(hand):
+        return 3
+    if is_flush(hand):
+        return 4
+    if is_straight(hand):
+        return 5
+    if ra_nk == 3:
+        return 6
+    if pair_rank == 2:
+        return 7
+    if pair_rank == 1:
+        return 8
 
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
@@ -91,7 +147,7 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
-    return max(hands, key=hand_rank)
+    return min(hands, key=hand_rank)
 
 if __name__ == "__main__":
     # read the number of test cases
