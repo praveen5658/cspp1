@@ -96,8 +96,9 @@ def is_full_house(hand):
 def max_face_count(hand):
     '''This will check the condition full house'''
     dictionary = {'A':0}
+    l_1 = list("KQJA")
     for lo_op in hand:
-        if lo_op[0] in list("KQJA"):
+        if lo_op[0] in l_1:
             dictionary[lo_op[0]] += 1
         else:
             dictionary[lo_op[0]] = 1
