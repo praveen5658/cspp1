@@ -125,7 +125,7 @@ def hand_rank(hand):
         return 3*10
     if is_flush(hand):
         return 4*10
-    if is_straight(hand):
+    if straight_value:
         return 5*10
     if ra_nk == 3:
         return 6*10
