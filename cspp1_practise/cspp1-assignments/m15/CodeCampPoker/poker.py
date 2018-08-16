@@ -72,7 +72,7 @@ def is_of_pair(hand):
     if l_1[-1] == 2 and l_1[-2] == 2:
         return 7*10
     if l_1[-1] == 2:
-    	nu_m = int(l_1[-1])
+        nu_m = int(l_1[-1])
         return 80+nu_m
     return 100
 def is_full_house(hand):
