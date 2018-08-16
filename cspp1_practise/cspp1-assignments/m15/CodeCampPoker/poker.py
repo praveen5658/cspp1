@@ -70,10 +70,11 @@ def is_of_pair(hand):
             dictionary[lo_op[0]] = 1
     l_1 = sorted(list(dictionary.values()))
     if l_1[-1] == 2 and l_1[-2] == 2:
-        return 2
+        return 7*10
     if l_1[-1] == 2:
-        return 1
-    return 0
+    	nu_m = int(l_1[-1])
+        return 80+nu_m
+    return 100
 def is_full_house(hand):
     '''This will check the condition full house'''
     dictionary = {}
@@ -99,22 +100,20 @@ def hand_rank(hand):
     ra_nk = is_of_kind(hand)
     pair_rank = is_of_pair(hand)
     if is_straight(hand) and is_flush(hand):
-        return 1
+        return 1*10
     if ra_nk == 4:
-        return 2
+        return 2*10
     if is_full_house(hand):
-        return 3
+        return 3*10
     if is_flush(hand):
-        return 4
+        return 4*10
     if is_straight(hand):
-        return 5
+        return 5*10
     if ra_nk == 3:
-        return 6
-    if pair_rank == 2:
-        return 7
-    if pair_rank == 1:
-        return 8
-    return 10
+        return 6*10
+    if pair_rank != 100:
+        return pair_rank
+    return 100
 
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
