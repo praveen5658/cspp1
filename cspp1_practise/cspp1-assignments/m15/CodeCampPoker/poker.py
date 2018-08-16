@@ -93,6 +93,15 @@ def is_full_house(hand):
     if l_1[0] in (2, 3) and l_1[1] in (2, 3):
         return True
     return False
+def max_face_count(hand):
+    '''This will check the condition full house'''
+    dictionary = {'A':0}
+    for lo_op in hand:
+        if lo_op[0] in list("KQJA"):
+            dictionary[lo_op[0]] += 1
+        else:
+            dictionary[lo_op[0]] = 1
+    return (len(dictionary.values()), dictionary['A'])
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -115,9 +124,12 @@ def hand_rank(hand):
         return 5*10
     if ra_nk == 3:
         return 6*10
-    if pair_rank != 100:
+    if pair_rank <= 89 and pair_rank >= 70:
         return pair_rank
-    return 100
+    (le_n, a_value) = max_face_count(hand)
+    if a_value > 0:
+        return 90 + le_n
+    return 100 + le_n
 
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
