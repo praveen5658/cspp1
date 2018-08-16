@@ -23,10 +23,11 @@ def is_straight(hand):
         for lo_op1 in range(le_n):
             if hand[lo_op1][0] == lo_op:
                 st_r += lo_op
+    if st_r == "TJQKA":
+        return 9
     for lo_op in range(11):
         if forward_sequence[lo_op:lo_op + 5] == st_r:
             return True
-    print(st_r)
     if st_r == "2345A":
         return True
     return False
@@ -115,8 +116,10 @@ def hand_rank(hand):
     '''
     ra_nk = is_of_kind(hand)
     pair_rank = is_of_pair(hand)
-    if is_straight(hand) and is_flush(hand):
-        print(10)
+    straight_value = is_straight(hand)
+    if straight_value not in (True, False):
+        return straight_value
+    if straight_value and is_flush(hand):
         return 1*10
     if ra_nk == 4:
         return 2*10
