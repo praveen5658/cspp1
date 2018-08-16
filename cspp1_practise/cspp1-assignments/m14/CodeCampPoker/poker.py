@@ -70,6 +70,7 @@ def is_of_pair(hand):
             dictionary[lo_op[0]] = 1
     if len(dictionary) != 3:
         return 0
+    print(dictionary)
     for lo_op in dictionary:
         if dictionary[lo_op] == 2:
             co_u += 1
