@@ -73,8 +73,9 @@ def is_of_pair(hand):
     if l_1[-1] == 2 and l_1[-2] == 2:
         return 7*10
     if l_1[-1] == 2:
+        nu_m = 0
         for k_ey in l_2:
-            if dictionary[k_ey] == 2:
+            if dictionary[k_ey] == 2 and k_ey in list("23456789"):
                 nu_m = int(k_ey)
         return 80+nu_m
     return 100
