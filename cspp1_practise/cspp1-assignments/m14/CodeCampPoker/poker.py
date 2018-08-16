@@ -54,11 +54,12 @@ def is_of_kind(hand):
             dictionary[lo_op[0]] += 1
         else:
             dictionary[lo_op[0]] = 1
-    if len(dictionary) != 2:
-        return 0
-    for lo_op in dictionary:
-        if dictionary[lo_op] in (3, 4):
-            return dictionary[lo_op]
+    l_1 = sorted(list(dictionary.values()))
+    if l_1[-1] == 4:
+        return 4
+    if l_1[-1] == 3:
+        return 3
+    return 0
 def is_of_pair(hand):
     '''This will check the conditions of twp pair and one pair'''
     dictionary = {}
@@ -68,13 +69,12 @@ def is_of_pair(hand):
             dictionary[lo_op[0]] += 1
         else:
             dictionary[lo_op[0]] = 1
-    if len(dictionary) != 3:
-        return 0
-    print(dictionary)
-    for lo_op in dictionary:
-        if dictionary[lo_op] == 2:
-            co_u += 1
-    return co_u
+    l_1 = sorted(list(dictionary.values()))
+    if l_1[-1] == 2 and l_1[-2] == 2:
+        return 2
+    if l_1[-1] == 2:
+        return 1
+    return 0
 def is_full_house(hand):
     '''This will check the condition full house'''
     dictionary = {}
