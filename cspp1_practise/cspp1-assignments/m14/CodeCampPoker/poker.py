@@ -72,7 +72,7 @@ def is_of_pair(hand):
         return 0
     for lo_op in dictionary:
         if dictionary[lo_op] == 2:
-            co_u +=1
+            co_u += 1
     return co_u
 def is_full_house(hand):
     '''This will check the condition full house'''
@@ -84,7 +84,8 @@ def is_full_house(hand):
             dictionary[lo_op[0]] = 1
     if len(dictionary) != 2:
         return False
-    if dictionary[0] in (2, 3) and dictionary[1] in (2, 3):
+    l_1 = list[dictionary.values()]
+    if l_1[0] in (2, 3) and l_1[1] in (2, 3):
         return True
 def hand_rank(hand):
     '''
