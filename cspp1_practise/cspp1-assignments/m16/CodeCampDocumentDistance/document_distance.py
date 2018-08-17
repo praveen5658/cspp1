@@ -53,13 +53,22 @@ def similarity(list1, list2):
     '''
         Compute the document distance as given in the PDF
     '''
+    dict_common = {}
     dict1 = convert_dictionary(list1)
     dict2 = convert_dictionary(list2)
-    list1_values = list(dict1.values())
-    list2_values = list(dict2.values())
-    (sum_digit1, sum_square1, sum_digit2, sum_square2) = frequency_sum(list1_values, list2_values)
-    return (sum_digit1 * sum_digit2)/(math.sqrt(sum_square1) * math.sqrt(sum_square2))
-
+    # list1_values = list(dict1.values())
+    # list2_values = list(dict2.values())
+    # (sum_digit1, sum_square1, sum_digit2, sum_square2) = frequency_sum(list1_values, list2_values)
+    for lo_op in dict1:
+        if lo_op in dict2:
+            dict_common[lo_op] = [dict1[lo_op]]
+            dict_common[lo_op].append(dict2[lo_op])
+    # print(dict_common)
+    for lo_op in dict_common:
+        product += dict_common[lo_op][0]*dict_common[lo_op][1]
+        sum_square1 += dict_common[lo_op][0]^2
+        sum_square2 += dict_common[lo_op][1]^2
+    return (product)/(math.sqrt(sum_square1) * math.sqrt(sum_square2))
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
