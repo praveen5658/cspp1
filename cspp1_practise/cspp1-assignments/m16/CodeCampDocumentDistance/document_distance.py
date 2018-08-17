@@ -69,6 +69,7 @@ def similarity(list1, list2):
     print(dict_common)
     if(len(dict_common) == 0):
         return 0.0
+    print(len(dict_common))
     for lo_op in dict_common:
         product += dict_common[lo_op][0]*dict_common[lo_op][1]
         sum_square1 += dict_common[lo_op][0]^2
