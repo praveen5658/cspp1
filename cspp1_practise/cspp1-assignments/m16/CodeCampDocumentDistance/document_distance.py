@@ -56,6 +56,9 @@ def similarity(list1, list2):
     dict_common = {}
     dict1 = convert_dictionary(list1)
     dict2 = convert_dictionary(list2)
+    product = 0
+    sum_square1 = 0
+    sum_square2 = 0
     # list1_values = list(dict1.values())
     # list2_values = list(dict2.values())
     # (sum_digit1, sum_square1, sum_digit2, sum_square2) = frequency_sum(list1_values, list2_values)
