@@ -83,8 +83,8 @@ def similarity(list1, list2):
     print(len(dict_common))
     for lo_op in dict_common:
         product += dict_common[lo_op][0]*dict_common[lo_op][1]
-        sum_square1 += dict_common[lo_op][0]^2
-        sum_square2 += dict_common[lo_op][1]^2
+        sum_square1 += dict_common[lo_op][0]**2
+        sum_square2 += dict_common[lo_op][1]**2
     return (product)/(math.sqrt(sum_square1) * math.sqrt(sum_square2))
 def load_stopwords(filename):
     '''
