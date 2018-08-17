@@ -46,19 +46,20 @@ def similarity(list1, list2):
     sum_square1 = 0
     sum_square2 = 0
     for lo_op in dict1:
-            if lo_op in dict2:
-                dict_common[lo_op] = [dict1[lo_op]]
-                dict_common[lo_op].append(dict2[lo_op])
-            else:
-                dict_common[lo_op] = [dict1[lo_op]]
-                dict_common[lo_op].append(0)
+        if lo_op in dict2:
+            dict_common[lo_op] = [dict1[lo_op]]
+            dict_common[lo_op].append(dict2[lo_op])
+        else:
+            dict_common[lo_op] = [dict1[lo_op]]
+            dict_common[lo_op].append(0)
     for lo_op in dict2:
         if lo_op not in dict_common:
             dict_common[lo_op] = [0]
             dict_common[lo_op].append(dict2[lo_op])
-    di = copy.deepcopy(dict_common)
-    for lo_op in di:
-        if len(lo_op) == 0:
+    d_i = copy.deepcopy(dict_common)
+    for lo_op in d_i:
+        le_n = len(lo_op)
+        if le_n == 0:
             del dict_common[lo_op]
     for lo_op in dict_common:
         product += dict_common[lo_op][0]*dict_common[lo_op][1]
