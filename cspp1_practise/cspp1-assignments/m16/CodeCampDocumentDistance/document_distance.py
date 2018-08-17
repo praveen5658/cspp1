@@ -10,7 +10,7 @@ def remove_characters(input_string):
     '''
     new_string = ''
     for lo_op in input_string:
-        if (lo_op <= 'z' and lo_op >= 'a') or (lo_op == ' '):
+        if 'a' <= lo_op <= 'z' or (lo_op == ' '):
             new_string += lo_op
     return new_string
 
