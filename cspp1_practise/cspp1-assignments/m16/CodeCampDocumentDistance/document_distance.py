@@ -76,10 +76,11 @@ def similarity(list1, list2):
     di = copy.deepcopy(dict_common)
     for lo_op in di:
         if len(lo_op) == 0:
+            print(dict_common[lo_op])
             del dict_common[lo_op]
     print(dict_common)
-    if(len(dict_common) == 0):
-        return 0.0
+    # if(len(dict_common) == 0):
+    #     return 0.0
     print(len(dict_common))
     for lo_op in dict_common:
         product += dict_common[lo_op][0]*dict_common[lo_op][1]
