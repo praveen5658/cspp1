@@ -10,7 +10,7 @@ def remove_characters(input_string):
     '''
     new_string = ''
     for lo_op in input_string:
-        if (lo_op <= 'z' and lo_op >= 'a') or (lo_op == ' ') or (lo_op == "'"):
+        if (lo_op <= 'z' and lo_op >= 'a') or (lo_op == ' '):
             new_string += lo_op
     return new_string
 def frequency_sum(list1, list2):
@@ -76,7 +76,6 @@ def similarity(list1, list2):
     di = copy.deepcopy(dict_common)
     for lo_op in di:
         if len(lo_op) == 0:
-            print(lo_op)
             del dict_common[lo_op]
     print(dict_common)
     # if(len(dict_common) == 0):
