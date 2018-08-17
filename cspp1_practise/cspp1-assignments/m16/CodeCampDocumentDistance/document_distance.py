@@ -13,21 +13,6 @@ def remove_characters(input_string):
         if (lo_op <= 'z' and lo_op >= 'a') or (lo_op == ' '):
             new_string += lo_op
     return new_string
-def frequency_sum(list1, list2):
-    '''
-        this will return frequency sum
-    '''
-    sum_digit1 = 0
-    sum_square1 = 0
-    sum_digit2 = 0
-    sum_square2 = 0
-    for lo_op in list1:
-        sum_digit1 += lo_op
-        sum_square1 += lo_op^2
-    for lo_op in list2:
-        sum_digit2 += lo_op
-        sum_square2 += lo_op^2
-    return sum_digit1, sum_square1, sum_digit2, sum_square2
 
 def remove_stopwords(li_st, stop_words):
     '''
@@ -60,8 +45,6 @@ def similarity(list1, list2):
     product = 0
     sum_square1 = 0
     sum_square2 = 0
-    print(len(dict1))
-    print(len(dict2))
     for lo_op in dict1:
             if lo_op in dict2:
                 dict_common[lo_op] = [dict1[lo_op]]
@@ -77,10 +60,6 @@ def similarity(list1, list2):
     for lo_op in di:
         if len(lo_op) == 0:
             del dict_common[lo_op]
-    print(dict_common)
-    # if(len(dict_common) == 0):
-    #     return 0.0
-    print(len(dict_common))
     for lo_op in dict_common:
         product += dict_common[lo_op][0]*dict_common[lo_op][1]
         sum_square1 += dict_common[lo_op][0]**2
