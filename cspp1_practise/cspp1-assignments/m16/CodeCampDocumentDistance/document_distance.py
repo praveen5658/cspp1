@@ -72,6 +72,10 @@ def similarity(list1, list2):
         if lo_op not in dict_common:
             dict_common[lo_op] = [0]
             dict_common[lo_op].append(dict2[lo_op])
+    di = dict_common[:]
+    for lo_op in di:
+        if len(lo_op) == 0:
+            dict_common.remove(lo_op)
     print(dict_common)
     if(len(dict_common) == 0):
         return 0.0
