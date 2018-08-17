@@ -59,13 +59,11 @@ def similarity(list1, list2):
     product = 0
     sum_square1 = 0
     sum_square2 = 0
-    # list1_values = list(dict1.values())
-    # list2_values = list(dict2.values())
-    # (sum_digit1, sum_square1, sum_digit2, sum_square2) = frequency_sum(list1_values, list2_values)
     for lo_op in dict1:
-        if lo_op in dict2:
-            dict_common[lo_op] = [dict1[lo_op]]
-            dict_common[lo_op].append(dict2[lo_op])
+        for lo_op1 in dict2:
+            if lo_op == lo_op1:
+                dict_common[lo_op] = [dict1[lo_op]]
+                dict_common[lo_op].append(dict2[lo_op])
     print(dict_common)
     if(len(dict_common) == 0):
         return 0.0
