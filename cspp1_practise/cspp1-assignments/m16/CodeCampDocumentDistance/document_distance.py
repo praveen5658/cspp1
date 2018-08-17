@@ -59,6 +59,8 @@ def similarity(list1, list2):
     product = 0
     sum_square1 = 0
     sum_square2 = 0
+    print(len(dict1))
+    print(len(dict2))
     for lo_op in dict1:
             if lo_op in dict2:
                 dict_common[lo_op] = [dict1[lo_op]]
