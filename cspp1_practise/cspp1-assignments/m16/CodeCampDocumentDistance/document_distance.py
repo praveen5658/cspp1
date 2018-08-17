@@ -70,10 +70,10 @@ def similarity(list1, list2):
         if lo_op not in dict_common:
             dict_common[lo_op] = [0]
             dict_common[lo_op].append(dict2[lo_op])
-    # print(dict_common)
+    print(dict_common)
     if(len(dict_common) == 0):
         return 0.0
-    # print(len(dict_common))
+    print(len(dict_common))
     for lo_op in dict_common:
         product += dict_common[lo_op][0]*dict_common[lo_op][1]
         sum_square1 += dict_common[lo_op][0]^2
