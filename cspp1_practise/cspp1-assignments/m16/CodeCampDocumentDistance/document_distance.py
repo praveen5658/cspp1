@@ -76,7 +76,7 @@ def similarity(list1, list2):
     di = copy.deepcopy(dict_common)
     for lo_op in di:
         if len(lo_op) == 0:
-            dict_common.remove(lo_op)
+            del dict_common[lo_op]
     print(dict_common)
     if(len(dict_common) == 0):
         return 0.0
