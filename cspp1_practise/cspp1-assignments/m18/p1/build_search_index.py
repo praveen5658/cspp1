@@ -19,6 +19,9 @@
         .
         .
     }
+
+    Author : Praveen
+    Date : 18-08-2018
 '''
 
 # helper function to load the stop words from a file
@@ -43,13 +46,13 @@ def word_list(text):
     final_string = ''
     final_list = []
     for lo_op in text:
-    	if 'a' <= lo_op <= 'z' or lo_op == ' ':
-    		final_string += lo_op
+        if 'a' <= lo_op <= 'z' or lo_op == ' ':
+            final_string += lo_op
     stopwords = load_stopwords("stopwords.txt")
     li_st = final_string.split()
     for lo_op in li_st:
-    	if lo_op not in stopwords:
-    		final_list.append(lo_op)
+        if lo_op not in stopwords:
+            final_list.append(lo_op)
     return final_list
 
 def build_search_index(docs):
@@ -71,24 +74,23 @@ def build_search_index(docs):
     li_st = []
     dictionary = {}
     for lo_op in docs:
-    	li_st.append(word_list(lo_op))
+        li_st.append(word_list(lo_op))
     #print(li_st)
     for outer_loop in li_st:
-    	for inner_loop in outer_loop:
-    		if inner_loop not in dictionary:
-    			dictionary[inner_loop] = []
+        for inner_loop in outer_loop:
+            if inner_loop not in dictionary:
+                dictionary[inner_loop] = []
     #print(dictionary)
     le_n = len(li_st)
     for ke_y in dictionary:
-    	for lo_op in range(le_n):
-    		if ke_y in li_st[lo_op]:
-    			cou_nt = 0
-    			for ch_r in li_st[lo_op]:
-    				if ch_r == ke_y:
-    					cou_nt += 1
-    			dictionary[ke_y].append((lo_op, cou_nt))
-    print(dictionary)
-    
+        for lo_op in range(le_n):
+            if ke_y in li_st[lo_op]:
+                cou_nt = 0
+                for ch_r in li_st[lo_op]:
+                    if ch_r == ke_y:
+                        cou_nt += 1
+                dictionary[ke_y].append((lo_op, cou_nt))
+    return dictionary
 
 # helper function to print the search index
 # use this to verify how the search index looks
@@ -116,8 +118,7 @@ def main():
 
     #call print to display the search index
     #print(documents)
-    #print_search_index(build_search_index(documents))
-    build_search_index(documents)
+    print_search_index(build_search_index(documents))
 
 if __name__ == '__main__':
     main()
