@@ -27,6 +27,9 @@
     Return the search results.
 
     Note: PyLint score need not be 10/10. Anything above 9.5 is good.
+
+    Author : Praveen
+    Date : 18-08-2018
 '''
 
 def search(search_index, word):
