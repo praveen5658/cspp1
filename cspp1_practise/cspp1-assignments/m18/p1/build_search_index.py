@@ -69,9 +69,15 @@ def build_search_index(docs):
 
     # return search index
     li_st = []
+    dictionary = {}
     for lo_op in docs:
     	li_st.append(word_list(lo_op))
-    print(li_st)
+    #print(li_st)
+    for outer_loop in li_st:
+    	for inner_loop in outer_loop:
+    		if inner_loop not in dictionary:
+    			dictionary[inner_loop] = []
+    print(dictionary)
     
 
 # helper function to print the search index
