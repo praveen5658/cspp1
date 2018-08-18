@@ -77,6 +77,16 @@ def build_search_index(docs):
     	for inner_loop in outer_loop:
     		if inner_loop not in dictionary:
     			dictionary[inner_loop] = []
+    #print(dictionary)
+    le_n = len(li_st)
+    for ke_y in dictionary:
+    	for lo_op in range(le_n):
+    		if ke_y in li_st[lo_op]:
+    			cou_nt = 0
+    			for ch_r in li_st[lo_op]:
+    				if ch_r == ke_y:
+    					cou_nt += 1
+    			dictionary[ke_y].append((lo_op, cou_nt))
     print(dictionary)
     
 
