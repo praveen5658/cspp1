@@ -45,7 +45,11 @@ def process_queries(search_index, queries):
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
-    pass
+    query_list = []
+    for lo_op in queries:
+        li_st = lo_op.split()
+        query_list.append(li_st)
+    print(query_list)
 
 def main():
     '''
@@ -64,9 +68,9 @@ def main():
         i += 1
 
     # call process queries
-    print(search_index)
-    print(queries)
-    #process_queries(search_index, queries)
+    # print(search_index)
+    # print(queries)
+    process_queries(search_index, queries)
 
 if __name__ == '__main__':
     main()
