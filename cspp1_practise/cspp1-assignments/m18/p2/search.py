@@ -55,7 +55,6 @@ def process_queries(search_index, queries):
     for lo_op in queries:
         li_st = lo_op.split()
         query_list.append(li_st)
-    print(query_list)
     for lo_op in query_list:
         for in_er in lo_op:
             li_st1 = search(search_index, in_er)
