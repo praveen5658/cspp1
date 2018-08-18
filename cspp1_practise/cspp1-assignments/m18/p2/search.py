@@ -60,7 +60,7 @@ def process_queries(search_index, queries):
         for in_er in lo_op:
             li_st1 = search(search_index, in_er)
             sample_list.append(li_st1)
-        print(set(sample_list))
+        print(sample_list)
 def main():
     '''
         main function
