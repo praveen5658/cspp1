@@ -39,7 +39,18 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    pass
+    text = text.lower()
+    final_string = ''
+    final_list = []
+    for lo_op in text:
+    	if 'a' <= lo_op <= 'z' or lo_op == ' ':
+    		final_string += lo_op
+    stopwords = load_stopwords("stopwords.txt")
+    li_st = final_string.split()
+    for lo_op in li_st:
+    	if lo_op not in stopwords:
+    		final_list.append(lo_op)
+    return final_list
 
 def build_search_index(docs):
     '''
@@ -57,7 +68,9 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    pass
+    li_st = word_list(docs[0])
+    return li_st
+    
 
 # helper function to print the search index
 # use this to verify how the search index looks
@@ -84,7 +97,7 @@ def main():
         i += 1
 
     #call print to display the search index
-    print(documents)
+    #print(documents)
     print_search_index(build_search_index(documents))
 
 if __name__ == '__main__':
