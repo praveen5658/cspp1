@@ -68,7 +68,9 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    li_st = word_list(docs[0])
+    li_st = []
+    for lo_op in docs:
+    	li_st.append(word_list(lo_op))
     print(li_st)
     
 
