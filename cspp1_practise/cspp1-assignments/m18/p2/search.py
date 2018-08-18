@@ -29,7 +29,7 @@
     Note: PyLint score need not be 10/10. Anything above 9.5 is good.
 '''
 
-def search(search_index, query):
+def search(search_index, word):
     '''
         function to search through the search index and return the results
         split the query into lowercase words
@@ -37,7 +37,12 @@ def search(search_index, query):
         collect all the values for the words that are in the search_index
         make a set of doc_id and return
     '''
-    pass
+    new_list = []
+    if word in search_index:
+        li_st = search_index[word]
+        for lo_op in li_st:
+            new_list.append(lo_op[0])
+    return new_list
 
 def process_queries(search_index, queries):
     '''
@@ -46,11 +51,16 @@ def process_queries(search_index, queries):
         print the results returned by search function
     '''
     query_list = []
+    sample_list = []
     for lo_op in queries:
         li_st = lo_op.split()
         query_list.append(li_st)
     print(query_list)
-
+    for lo_op in query_list:
+        for in_er in lo_op:
+            li_st1 = search(search_index, in_er)
+            sample_list.append(li_st1)
+        print(set(sample_list))
 def main():
     '''
         main function
