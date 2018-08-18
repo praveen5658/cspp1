@@ -69,7 +69,7 @@ def build_search_index(docs):
 
     # return search index
     li_st = word_list(docs[0])
-    return li_st
+    print(li_st)
     
 
 # helper function to print the search index
@@ -98,7 +98,8 @@ def main():
 
     #call print to display the search index
     #print(documents)
-    print_search_index(build_search_index(documents))
+    #print_search_index(build_search_index(documents))
+    build_search_index(documents)
 
 if __name__ == '__main__':
     main()
