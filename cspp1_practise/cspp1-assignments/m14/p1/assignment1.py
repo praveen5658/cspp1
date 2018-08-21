@@ -93,13 +93,13 @@ class Message():
         return self.message_text
 
     ### DO NOT MODIFY THIS METHOD ###
-    def get_valid_words(self):
-        '''
-        Used to safely access a copy of self.valid_words outside of the class
-        Returns: a COPY of self.valid_words
-        '''
-        return self.valid_words[:]
-    def build_shift_dict(shift):
+    # def get_valid_words(self):
+    #     '''
+    #     Used to safely access a copy of self.valid_words outside of the class
+    #     Returns: a COPY of self.valid_words
+    #     '''
+    #     return self.valid_words[:]
+    def build_shift_dict(self, shift):
         '''
         Creates a dictionary that can be used to apply a cipher to a letter
         The dictionary maps every uppercase and lowercase letter to a
