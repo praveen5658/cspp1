@@ -132,6 +132,7 @@ class Message(object):
 
 ### Paste your implementation of the `PlaintextMessage` class here
 class PlaintextMessage(Message):
+    '''Converting Plain to Cipher text'''
     def __init__(self, text, shift):
         '''
         Initializes a PlaintextMessage object
@@ -148,11 +149,11 @@ class PlaintextMessage(Message):
         Hint: consider using the parent class constructor so less
         code is repeated
         '''
-        c = Message(text)
+        message_object = Message(text)
         self.message_text = text
         self.shift = shift
-        self.encrypting_dict = c.build_shift_dict(shift)
-        self.message_text_encrypted = c.apply_shift(shift)
+        self.encrypting_dict = message_object.build_shift_dict(shift)
+        self.message_text_encrypted = message_object.apply_shift(shift)
     def get_shift(self):
         '''
         Used to safely access self.shift outside of the class
