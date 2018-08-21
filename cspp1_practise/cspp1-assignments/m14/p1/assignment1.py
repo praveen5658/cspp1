@@ -112,6 +112,7 @@ class Message():
         Returns: a dictionary mapping a letter (string) to
                  another letter (string).
         '''
+        self.key = shift
         cipher_dictionary = {}
         upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
         lower = 'abcdefghijklmnopqrstuvwxyz'
