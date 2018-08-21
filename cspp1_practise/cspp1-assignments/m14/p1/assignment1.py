@@ -136,7 +136,10 @@ class Message(object):
         cipher_text = ''
         cipher_dictionary = self.build_shift_dict(shift)
         for lo_op in self.message_text:
-            cipher_text += cipher_dictionary[lo_op]
+        	if 'a' <= lo_op <= 'z' or 'A' <= lo_op <= 'Z':
+            	cipher_text += cipher_dictionary[lo_op]
+            else:
+            	cipher_text += lo_op
         return cipher_text
         
 
