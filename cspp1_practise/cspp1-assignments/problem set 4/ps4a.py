@@ -1,4 +1,7 @@
-# The 6.00 Word Game
+'''
+    Author : Praveen
+    Date : 20-08-2018
+'''
 
 import random
 import string
