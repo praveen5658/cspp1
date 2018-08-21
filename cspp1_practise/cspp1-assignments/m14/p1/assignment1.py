@@ -40,6 +40,10 @@
 # Remember that spaces and punctuation should not be changed by the cipher.
 
 # Helper code
+'''
+Author : Praveen
+Date : 21-08-2018
+'''
 def load_words(file_name):
     '''
     file_name (string): the name of the file containing
@@ -67,10 +71,10 @@ WORDLIST_FILENAME = 'words.txt'
 ### Paste your implementation of the Message class here
 class Message(object):
     ### DO NOT MODIFY THIS METHOD ###
+    '''Main Class'''
     def __init__(self, text):
         '''
         Initializes a Message object
-                
         text (string): the message's text
 
         a Message object has two attributes:
@@ -106,7 +110,7 @@ class Message(object):
         should have 52 keys of all the uppercase letters and all the lowercase
         letters only.        
         
-        shift (integer): the amount by which to shift every letter of the 
+        shift (integer): the amount by which to shift every letter of the
         alphabet. 0 <= shift < 26
 
         Returns: a dictionary mapping a letter (string) to 
@@ -123,9 +127,9 @@ class Message(object):
 
     def apply_shift(self, shift):
         '''
-        Applies the Caesar Cipher to self.message_text with the input shift.
+        Applies the Caesar Cipher to self.message_text with the input shift
         Creates a new string that is self.message_text shifted down the
-        alphabet by some number of characters determined by the input shift        
+        alphabet by some number of characters determined by the input shift
         
         shift (integer): the shift with which to encrypt the message.
         0 <= shift < 26
