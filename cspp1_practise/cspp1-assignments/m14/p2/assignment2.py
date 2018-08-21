@@ -149,7 +149,7 @@ class PlaintextMessage(Message):
         Hint: consider using the parent class constructor so less
         code is repeated
         '''
-        super(Message, self)
+        # super(Message, self)
         self.message_text = text
         self.shift = shift
         self.encrypting_dict = super(Message, self).build_shift_dict(shift)
