@@ -1,4 +1,4 @@
-'''Problem 1 - Build the Shift Dictionary and Apply Shift'''
+'''Problem 1 - Build the Shift Dictionary and Apply Shift
 # The Message class contains methods that could be used to apply a
 # cipher to a string, either to encrypt or to decrypt a message
 # (since for Caesar codes this is the same action).
@@ -40,7 +40,7 @@
 # Remember that spaces and punctuation should not be changed by the cipher.
 
 # Helper code
-'''
+
 Author : Praveen
 Date : 21-08-2018
 '''
@@ -69,7 +69,7 @@ WORDLIST_FILENAME = 'words.txt'
 
 
 ### Paste your implementation of the Message class here
-class Message(object):
+class Message():
     ### DO NOT MODIFY THIS METHOD ###
     '''Main Class'''
     def __init__(self, text):
@@ -140,7 +140,6 @@ class Message(object):
             else:
                 cipher_text += lo_op
         return cipher_text
-        
 
 def main():
     '''
