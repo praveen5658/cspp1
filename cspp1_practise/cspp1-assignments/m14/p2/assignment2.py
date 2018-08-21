@@ -149,11 +149,11 @@ class PlaintextMessage(Message):
         Hint: consider using the parent class constructor so less
         code is repeated
         '''
-        message_object = Message(text)
+        super(Message, text)
         self.message_text = text
         self.shift = shift
-        self.encrypting_dict = message_object.build_shift_dict(shift)
-        self.message_text_encrypted = message_object.apply_shift(shift)
+        self.encrypting_dict = super(Message).build_shift_dict(shift)
+        self.message_text_encrypted = super(Message).apply_shift(shift)
     def get_shift(self):
         '''
         Used to safely access self.shift outside of the class
