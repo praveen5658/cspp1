@@ -229,7 +229,6 @@ class CiphertextMessage(Message):
             self.valid_words (list, determined using helper function load_words)
         '''
         Message.__init__(self, text)
-        print(self.words)
         self.text = text
 
     def decrypt_message(self):
@@ -251,7 +250,7 @@ class CiphertextMessage(Message):
         li_st = Message.apply_shift(self, 1)
         cou = 0
         for lo_op in li_st:
-            if lo_op in self.words:
+            if lo_op in self.valid_words:
                 cou += 1
         max_value = cou
         decrypt_shift = 1
@@ -259,7 +258,7 @@ class CiphertextMessage(Message):
             li_st = Message.apply_shift(self, shift_value)
             cou = 0
             for lo_op in li_st:
-                if lo_op in self.words:
+                if lo_op in self.valid_words:
                     cou += 1
             if max_value < cou:
                 decrypt_shift = shift_value
