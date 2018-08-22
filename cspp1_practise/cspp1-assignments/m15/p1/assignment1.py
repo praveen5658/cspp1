@@ -254,7 +254,7 @@ class CiphertextMessage(Message):
                 cou += 1
         max_value = cou
         decrypt_shift = 1
-        print("Test", shift_value, max_value)
+        print("Test", 1, max_value)
         print(cou)
         for shift_value in range(2, 26):
             li_st = Message.apply_shift(self, shift_value)
