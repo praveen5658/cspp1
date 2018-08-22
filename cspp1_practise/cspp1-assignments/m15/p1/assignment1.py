@@ -273,7 +273,7 @@ class CiphertextMessage(Message):
                 decrypt_shift = shift_value
                 final_list = li_st[:]
         print(decrypt_shift)
-        return final_list
+        return Message.apply_shift(self, 10)
 
 
 ### DO NOT MODIFY THIS METHOD ###
