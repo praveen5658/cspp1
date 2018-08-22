@@ -279,8 +279,7 @@ class CiphertextMessage(Message):
             if max_value < cou:
                 decrypt_shift = shift_value
                 decrypt_string = new_string
-        print(decrypt_shift)
-        return decrypt_string
+        return 26-decrypt_shift, decrypt_string
 
 
 ### DO NOT MODIFY THIS METHOD ###
