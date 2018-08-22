@@ -228,6 +228,10 @@ class CiphertextMessage(Message):
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words)
         '''
+        # sample_text = ''
+        # for lo_op in text:
+        #     if 'a'<= lo_op <= 'z' or 'A'<= lo_op <= 'Z' or lo_op = ' ':
+        #         sample_text += lo_op
         Message.__init__(self, text)
         self.text = text
 
@@ -253,6 +257,7 @@ class CiphertextMessage(Message):
             if lo_op in self.valid_words:
                 cou += 1
         max_value = cou
+        final_list = []
         decrypt_shift = 1
         print("Test", 1, max_value)
         print(cou)
@@ -266,7 +271,9 @@ class CiphertextMessage(Message):
             print(cou)
             if max_value < cou:
                 decrypt_shift = shift_value
-        return decrypt_shift
+                final_list = li_st[:]
+        print(decrypt_shift)
+        return final_list
 
 
 ### DO NOT MODIFY THIS METHOD ###
