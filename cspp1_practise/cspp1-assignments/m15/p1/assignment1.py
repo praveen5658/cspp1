@@ -141,7 +141,7 @@ class Message(object):
                 continue
             else:
                 new_msg.append(self.build_shift_dict(shift)[i])
-        return new_msg
+        return ''.join(new_msg)
 
 class PlaintextMessage(Message):
     ''' PlaintextMessage class '''
@@ -251,29 +251,36 @@ class CiphertextMessage(Message):
         Returns: a tuple of the best shift value used to decrypt the message
         and the decrypted message text using that shift value
         '''
-        li_st = Message.apply_shift(self, 1)
+        new_string = Message.apply_shift(self, 1)
         cou = 0
+        final_string = ''
+        decrypt_string = ''
+        for lo_op in new_string:
+            if 'a' <= lo_op <= 'z' or 'A' <= lo_op <= 'Z' or lo_op == ' ':
+                final_string += lo_op 
+        li_st = final_string.split()
         for lo_op in li_st:
-            if lo_op in self.valid_words:
+            if lo_op.lower() in self.valid_words:
                 cou += 1
         max_value = cou
-        final_list = []
         decrypt_shift = 1
-        print("Test", 1, max_value)
-        print(cou)
+        decrypt_string = new_string
         for shift_value in range(2, 26):
-            li_st = Message.apply_shift(self, shift_value)
+            new_string = Message.apply_shift(self, shift_value)
             cou = 0
+            final_string = ''
+            for lo_op in new_string:
+                if 'a' <= lo_op <= 'z' or 'A' <= lo_op <= 'Z' or lo_op == ' ':
+                    final_string += lo_op 
+            li_st = final_string.split()
             for lo_op in li_st:
-                if lo_op in self.valid_words:
+                if lo_op.lower() in self.valid_words:
                     cou += 1
-            print(shift_value, max_value)
-            print(cou)
             if max_value < cou:
                 decrypt_shift = shift_value
-                final_list = li_st[:]
+                decrypt_string = new_string
         print(decrypt_shift)
-        return Message.apply_shift(self, 16)
+        return decrypt_string
 
 
 ### DO NOT MODIFY THIS METHOD ###
