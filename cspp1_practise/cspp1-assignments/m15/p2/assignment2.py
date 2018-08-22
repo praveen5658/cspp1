@@ -164,7 +164,7 @@ class PlaintextMessage(Message):
         Hint: consider using the parent class constructor so less
         code is repeated
         '''
-        super(PlaintextMessage, self).__init__()
+        super(PlaintextMessage, self).__init__(text)
         self.text = text
         self.shift = shift
         self.valid_words = load_words("words.txt")
