@@ -51,17 +51,20 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    first_matrix = []
-    first_size = (input()).split(',')
-    row_size1 = int(first_size[0])
-    column_size1 = int(first_size[1])
-    for lo_op in range(row_size1):
-        li_st = (input()).split()
-        sample_list = []
-        for inner_loop in range(column_size1):
-            sample_list.append(int(li_st[inner_loop]))
-        first_matrix.append(sample_list)
-    return first_matrix, row_size1, column_size1
+    try:
+        first_matrix = []
+        first_size = (input()).split(',')
+        row_size1 = int(first_size[0])
+        column_size1 = int(first_size[1])
+        for lo_op in range(row_size1):
+            li_st = (input()).split()
+            sample_list = []
+            for inner_loop in range(column_size1):
+                sample_list.append(int(li_st[inner_loop]))
+            first_matrix.append(sample_list)
+        return first_matrix, row_size1, column_size1
+    except IndexError:
+        print("Error: Invalid input for the matrix")
 
 def main():
     # read matrix 1
