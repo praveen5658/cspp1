@@ -57,10 +57,10 @@ def read_matrix():
                 sample_list.append(int(li_st[inner_loop]))
             first_matrix.append(sample_list)
             lo_op += 1
-        return first_matrix, row_size1, column_size1
+        # return first_matrix, row_size1, column_size1
     except IndexError:
         print("Error: Invalid input for the matrix")
-        return None, row_size1, column_size1
+    return first_matrix, row_size1, column_size1
 
 def main():
     '''# read matrix 1
@@ -73,9 +73,9 @@ def main():
     Main Function
     '''
     (first_matrix, row_size1, column_size1) = read_matrix()
-    if first_matrix not None:
+    if first_matrix != []:
         (second_matrix, row_size2, column_size2) = read_matrix()
-        if second_matrix not None:
+        if second_matrix != []:
             if row_size1 != row_size2 or column_size1 != column_size2:
                 print("Error: Matrix shapes invalid for addition")
                 print("None")
