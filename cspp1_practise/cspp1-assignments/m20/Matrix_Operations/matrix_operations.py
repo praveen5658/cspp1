@@ -65,6 +65,7 @@ def read_matrix():
         return first_matrix, row_size1, column_size1
     except IndexError:
         print("Error: Invalid input for the matrix")
+        return None, row_size1, column_size1
 
 def main():
     # read matrix 1
@@ -75,9 +76,11 @@ def main():
 
     # multiply matrix 1 and matrix 2
     (first_matrix, row_size1, column_size1) = read_matrix()
-    (second_matrix, row_size2, column_size2) = read_matrix()
-    print(add_matrix(first_matrix,row_size1,column_size1, second_matrix, row_size2, column_size2))
-    print(mult_matrix(first_matrix,row_size1,column_size1, second_matrix, row_size2, column_size2))
+    if first_matrix != None:
+        (second_matrix, row_size2, column_size2) = read_matrix()
+        if second_matrix != None:
+            print(add_matrix(first_matrix,row_size1,column_size1, second_matrix, row_size2, column_size2))
+            print(mult_matrix(first_matrix,row_size1,column_size1, second_matrix, row_size2, column_size2))
 
 if __name__ == '__main__':
     main()
