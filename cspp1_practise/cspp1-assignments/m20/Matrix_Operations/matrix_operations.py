@@ -75,10 +75,12 @@ def main():
         if second_matrix != None:
             if row_size1 != row_size2 or column_size1 != column_size2:
                 print("Error: Matrix shapes invalid for addition")
+                print("None")
             else:
                 print(add_matrix(first_matrix, row_size1, column_size1, second_matrix))
             if column_size1 != row_size2:
                 print("Error: Matrix shapes invalid for mult")
+                print("None")print("None")
             else:
                 print(mult_matrix(first_matrix, row_size1, second_matrix, row_size2, column_size2))
 
