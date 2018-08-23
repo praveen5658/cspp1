@@ -2,7 +2,7 @@
 Author : Praveen
 Date : 23-08-2018
 '''
-def mult_matrix(first_matrix, row_size1, second_matrix, row_size2, column_size2):
+def mult_matrix(matrix_1, row_size1, matrix_2, row_size2, column_size2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -21,7 +21,7 @@ def mult_matrix(first_matrix, row_size1, second_matrix, row_size2, column_size2)
         final_matrix.append(li_st)
     return final_matrix
 
-def add_matrix(first_matrix, row_size1, column_size1, second_matrix):
+def add_matrix(matrix_1, row_size1, column_size1, matrix_2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
