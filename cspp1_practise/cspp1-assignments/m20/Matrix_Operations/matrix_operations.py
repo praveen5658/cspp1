@@ -2,7 +2,7 @@
 Author : Praveen
 Date : 23-08-2018
 '''
-def mult_matrix(matrix_1,row_size1,column_size1, matrix_2, row_size2, column_size2):
+def mult_matrix(first_matrix, row_size1, second_matrix, row_size2, column_size2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -10,9 +10,6 @@ def mult_matrix(matrix_1,row_size1,column_size1, matrix_2, row_size2, column_siz
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    if column_size1 != row_size2:
-        print("Error: Matrix shapes invalid for mult")
-        return
     final_matrix = []
     for lo_op in range(row_size1):
         li_st = []
@@ -24,7 +21,7 @@ def mult_matrix(matrix_1,row_size1,column_size1, matrix_2, row_size2, column_siz
         final_matrix.append(li_st)
     return final_matrix
 
-def add_matrix(matrix_1,row_size1,column_size1, matrix_2, row_size2, column_size2):
+def add_matrix(first_matrix, row_size1, column_size1, second_matrix):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -32,9 +29,6 @@ def add_matrix(matrix_1,row_size1,column_size1, matrix_2, row_size2, column_size
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    if row_size1 != row_size2 or column_size1 != column_size2:
-        print("Error: Matrix shapes invalid for addition")
-        return
     final_matrix = []
     for lo_op in range(row_size1):
         li_st = []
@@ -79,8 +73,14 @@ def main():
     if first_matrix != None:
         (second_matrix, row_size2, column_size2) = read_matrix()
         if second_matrix != None:
-            print(add_matrix(first_matrix,row_size1,column_size1, second_matrix, row_size2, column_size2))
-            print(mult_matrix(first_matrix,row_size1,column_size1, second_matrix, row_size2, column_size2))
+            if row_size1 != row_size2 or column_size1 != column_size2:
+                print("Error: Matrix shapes invalid for addition")
+            else:
+                print(add_matrix(first_matrix, row_size1, column_size1, second_matrix))
+            if column_size1 != row_size2:
+                print("Error: Matrix shapes invalid for mult")
+            else:
+                print(mult_matrix(first_matrix, row_size1, second_matrix, row_size2, column_size2))
 
 if __name__ == '__main__':
     main()
