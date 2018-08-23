@@ -57,10 +57,10 @@ def read_matrix():
                 sample_list.append(int(li_st[inner_loop]))
             first_matrix.append(sample_list)
             lo_op += 1
-        # return first_matrix, row_size1, column_size1
+        return first_matrix, row_size1, column_size1
     except IndexError:
         print("Error: Invalid input for the matrix")
-    return first_matrix, row_size1, column_size1
+        return first_matrix, row_size1, column_size1
 
 def main():
     '''# read matrix 1
