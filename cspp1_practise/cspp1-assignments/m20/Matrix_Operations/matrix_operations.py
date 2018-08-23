@@ -73,9 +73,9 @@ def main():
     Main Function
     '''
     (first_matrix, row_size1, column_size1) = read_matrix()
-    if first_matrix != None:
+    if first_matrix not is None:
         (second_matrix, row_size2, column_size2) = read_matrix()
-        if second_matrix != None:
+        if second_matrix not is None:
             if row_size1 != row_size2 or column_size1 != column_size2:
                 print("Error: Matrix shapes invalid for addition")
                 print("None")
