@@ -60,7 +60,7 @@ def read_matrix():
         return first_matrix, row_size1, column_size1
     except IndexError:
         print("Error: Invalid input for the matrix")
-        return first_matrix, row_size1, column_size1
+        return [], row_size1, column_size1
 
 def main():
     '''# read matrix 1
