@@ -10,7 +10,7 @@ def mult_matrix(matrix_1,row_size1,column_size1, matrix_2, row_size2, column_siz
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    if column_size1 != row_size1:
+    if column_size1 != row_size2:
         print("Error: Matrix shapes invalid for mult")
         return
     final_matrix = []
