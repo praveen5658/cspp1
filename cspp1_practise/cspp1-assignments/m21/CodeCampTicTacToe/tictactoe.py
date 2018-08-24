@@ -69,27 +69,26 @@ def main():
         print("invalid input")
     elif x_count > o_count + 1 or o_count > x_count + 1:
         print("invalid game")
-    else:
-        turn_x = 'x'
-        boolean_x = (is_horizontal(main_list, turn_x)
-                     or is_vertical(main_list, turn_x)
-                     or is_diagnol_forward(main_list, turn_x)
-                     or is_diagnol_backward(main_list, turn_x))
-        turn_o = 'o'
-        boolean_o = (is_horizontal(main_list, turn_o)
-                     or is_vertical(main_list, turn_o)
-                     or is_diagnol_forward(main_list, turn_o)
-                     or is_diagnol_backward(main_list, turn_o))
-        if boolean_x and boolean_o:
-            print("invalid game")
-            cou += 1
-        if boolean_x and cou == 0:
-            print(turn_x)
-            cou += 1
-        if boolean_o and cou == 0:
-            print(turn_o)
-            cou += 1
-        if cou == 0:
-            print("draw")
+    turn_x = 'x'
+    boolean_x = (is_horizontal(main_list, turn_x)
+                 or is_vertical(main_list, turn_x)
+                 or is_diagnol_forward(main_list, turn_x)
+                 or is_diagnol_backward(main_list, turn_x))
+    turn_o = 'o'
+    boolean_o = (is_horizontal(main_list, turn_o)
+                 or is_vertical(main_list, turn_o)
+                 or is_diagnol_forward(main_list, turn_o)
+                 or is_diagnol_backward(main_list, turn_o))
+    if boolean_x and boolean_o:
+        print("invalid game")
+        cou += 1
+    if boolean_x and cou == 0:
+        print(turn_x)
+        cou += 1
+    if boolean_o and cou == 0:
+        print(turn_o)
+        cou += 1
+    if cou == 0:
+        print("draw")
 if __name__ == '__main__':
     main()
