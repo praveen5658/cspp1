@@ -67,8 +67,10 @@ def main():
                 other_char += 1
     if other_char != 0:
         print("invalid input")
+        cou += 1
     elif x_count > o_count + 1 or o_count > x_count + 1:
         print("invalid game")
+        cou += 1
     turn_x = 'x'
     boolean_x = (is_horizontal(main_list, turn_x)
                  or is_vertical(main_list, turn_x)
@@ -79,7 +81,7 @@ def main():
                  or is_vertical(main_list, turn_o)
                  or is_diagnol_forward(main_list, turn_o)
                  or is_diagnol_backward(main_list, turn_o))
-    if boolean_x and boolean_o:
+    if boolean_x and boolean_o and cou == 0:
         print("invalid game")
         cou += 1
     if boolean_x and cou == 0:
