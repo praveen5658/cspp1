@@ -1,4 +1,5 @@
 def is_diagnol_forward(main_list, turn):
+    '''Checks for diagnol forward match'''
     cou = 0
     for lo_op in range(3):
         if not main_list[lo_op][lo_op] is turn:
@@ -7,6 +8,7 @@ def is_diagnol_forward(main_list, turn):
         return True
     return False
 def is_diagnol_backward(main_list, turn):
+    '''Checks for diagnol backward match'''
     cou = 0
     in_loop = 2
     for lo_op in range(3):
@@ -17,6 +19,7 @@ def is_diagnol_backward(main_list, turn):
         return True
     return False
 def is_horizontal(main_list, turn):
+    '''Checks for horizontal match'''
     cou = 0
     for lo_op in range(3):
         for in_loop in range(3):
@@ -27,6 +30,7 @@ def is_horizontal(main_list, turn):
         cou = 0
     return False
 def is_vertical(main_list, turn):
+    '''Checks for Vertical match'''
     cou = 0
     for lo_op in range(3):
         for in_loop in range(3):
@@ -37,6 +41,7 @@ def is_vertical(main_list, turn):
         cou = 0
     return False
 def main():
+    '''Main Function'''
     cou = 0
     x_count = 0
     o_count = 0
@@ -67,7 +72,10 @@ def main():
                      or is_diagnol_forward(main_list, turn_x)
                      or is_diagnol_backward(main_list, turn_x))
         turn_o = 'o'
-        boolean_o = (is_horizontal(main_list, turn_o) or is_vertical(main_list, turn_o) or is_diagnol_forward(main_list, turn_o) or is_diagnol_backward(main_list, turn_o))
+        boolean_o = (is_horizontal(main_list, turn_o)
+                     or is_vertical(main_list, turn_o)
+                     or is_diagnol_forward(main_list, turn_o)
+                     or is_diagnol_backward(main_list, turn_o))
         if boolean_x and boolean_o:
             print("invalid game")
             cou += 1
