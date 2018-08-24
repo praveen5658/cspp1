@@ -114,12 +114,14 @@ def main():
         if boolean:
             print(turn)
             cou += 1
-        if cou == 0:
-            turn = 'o'
-            boolean = (is_horizontal(main_list, turn) or is_vertical(main_list, turn) or is_diagnol_forward(main_list, turn) or is_diagnol_backward(main_list, turn))
-            if boolean:
-                print(turn)
-                cou += 1
+        turn = 'o'
+        boolean = (is_horizontal(main_list, turn) or is_vertical(main_list, turn) or is_diagnol_forward(main_list, turn) or is_diagnol_backward(main_list, turn))
+        if boolean and cou == 1:
+            print("invalid game")
+            cou += 1
+        if boolean :
+            print(turn)
+            cou += 1
         if cou == 0:
             print("draw")
 if __name__ == '__main__':
