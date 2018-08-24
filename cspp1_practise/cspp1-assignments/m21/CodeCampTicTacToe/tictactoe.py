@@ -116,10 +116,10 @@ def main():
         if boolean_x and boolean_o:
             print("invalid game")
             cou += 1
-        if boolean_x:
+        if boolean_x and cou == 0:
             print(turn_x)
             cou += 1
-        if boolean_o:
+        if boolean_o and cou == 0:
             print(turn_o)
             cou += 1
         if cou == 0:
