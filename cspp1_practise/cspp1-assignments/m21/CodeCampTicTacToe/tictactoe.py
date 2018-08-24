@@ -1,3 +1,7 @@
+'''
+Author : Praveen
+Date : 24-08-2018
+'''
 def is_diagnol_forward(main_list, turn):
     '''Checks for diagnol forward match'''
     cou = 0
