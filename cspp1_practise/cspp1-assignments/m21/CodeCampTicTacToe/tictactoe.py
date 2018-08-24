@@ -94,6 +94,7 @@ def main():
     x_count = 0
     o_count = 0
     char_count = 0
+    other_char = 0
     row_one = input().split()
     row_two = input().split()
     row_three = input().split()
@@ -104,9 +105,13 @@ def main():
                 x_count += 1
             elif main_list[lo_op][in_loop] == 'o':
                 o_count += 1
-            else:
+            elif main_list[lo_op][in_loop] == '.':
                 char_count += 1
-    if x_count > o_count + 1 or o_count > x_count + 1:
+            else:
+                other_char += 1
+    if other_char != 0:
+        print("invalid input")
+    elif x_count > o_count + 1 or o_count > x_count + 1:
         print("invalid game")
     else:
         turn_x = 'x'
