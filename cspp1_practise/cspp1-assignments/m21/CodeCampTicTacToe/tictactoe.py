@@ -91,22 +91,36 @@ def main():
     # if num == 0:
     #     print("Game is Tie")
     cou = 0
+    x_count = 0
+    o_count = 0
+    char_count = 0
     row_one = input().split()
     row_two = input().split()
     row_three = input().split()
     main_list = [row_one, row_two, row_three]
-    turn = 'x'
-    boolean = (is_horizontal(main_list, turn) or is_vertical(main_list, turn) or is_diagnol_forward(main_list, turn) or is_diagnol_backward(main_list, turn))
-    if boolean:
-    	print(turn)
-    	cou += 1
-    if cou == 0:
-    	turn = 'o'
-    	boolean = (is_horizontal(main_list, turn) or is_vertical(main_list, turn) or is_diagnol_forward(main_list, turn) or is_diagnol_backward(main_list, turn))
-    	if boolean:
-    		print(turn)
-    		cou += 1
-    if cou == 0:
-    	print("draw")
+    for lo_op in range(3):
+        for in_loop in range(3):
+            if main_list[lo_op][in_loop] == 'x':
+                x_count += 1
+            elif main_list[lo_op][in_loop] == 'o':
+                o_count += 1
+            else:
+                char_count += 1
+    if x_count > o_count + 1 or o_count > x_count + 1:
+        print("invalid game")
+    else:
+        turn = 'x'
+        boolean = (is_horizontal(main_list, turn) or is_vertical(main_list, turn) or is_diagnol_forward(main_list, turn) or is_diagnol_backward(main_list, turn))
+        if boolean:
+            print(turn)
+            cou += 1
+        if cou == 0:
+            turn = 'o'
+            boolean = (is_horizontal(main_list, turn) or is_vertical(main_list, turn) or is_diagnol_forward(main_list, turn) or is_diagnol_backward(main_list, turn))
+            if boolean:
+                print(turn)
+                cou += 1
+        if cou == 0:
+            print("draw")
 if __name__ == '__main__':
     main()
