@@ -109,18 +109,18 @@ def main():
     if x_count > o_count + 1 or o_count > x_count + 1:
         print("invalid game")
     else:
-        turn = 'x'
-        boolean = (is_horizontal(main_list, turn) or is_vertical(main_list, turn) or is_diagnol_forward(main_list, turn) or is_diagnol_backward(main_list, turn))
-        if boolean:
-            print(turn)
-            cou += 1
-        turn = 'o'
-        boolean = (is_horizontal(main_list, turn) or is_vertical(main_list, turn) or is_diagnol_forward(main_list, turn) or is_diagnol_backward(main_list, turn))
-        if boolean and cou == 1:
+        turn_x = 'x'
+        boolean_x = (is_horizontal(main_list, turn_x) or is_vertical(main_list, turn_x) or is_diagnol_forward(main_list, turn_x) or is_diagnol_backward(main_list, turn_x))
+        turn_o = 'o'
+        boolean_o = (is_horizontal(main_list, turn_o) or is_vertical(main_list, turn_o) or is_diagnol_forward(main_list, turn_o) or is_diagnol_backward(main_list, turn_o))
+        if boolean_x and boolean_o:
             print("invalid game")
             cou += 1
-        if boolean :
-            print(turn)
+        if boolean_x:
+            print(turn_x)
+            cou += 1
+        if boolean_o:
+            print(turn_o)
             cou += 1
         if cou == 0:
             print("draw")
