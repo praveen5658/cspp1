@@ -10,6 +10,7 @@
     Date : 25-08-2018
 '''
 def first_row(sudoku):
+    '''Sub function'''
     li_st1 = []
     li_st2 = []
     li_st3 = []
@@ -23,6 +24,7 @@ def first_row(sudoku):
     if not (is_line(li_st1) and is_line(li_st2) and is_line(li_st3)):
         return False
 def second_row(sudoku):
+    '''Sub function'''
     li_st1 = []
     li_st2 = []
     li_st3 = []
@@ -36,6 +38,7 @@ def second_row(sudoku):
     if not (is_line(li_st1) and is_line(li_st2) and is_line(li_st3)):
         return False
 def third_row(sudoku):
+    '''Sub function'''
     li_st1 = []
     li_st2 = []
     li_st3 = []
@@ -82,11 +85,11 @@ def check_sudoku(sudoku):
             boolean = is_line(li_st)
             if not boolean:
                 return False
-    if first_row(sudoku) == False:
+    if not first_row(sudoku):
         return False
-    if second_row(sudoku) == False:
+    if not second_row(sudoku):
         return False
-    if third_row(sudoku) == False:
+    if not third_row(sudoku):
         return False
     return True
 def main():
