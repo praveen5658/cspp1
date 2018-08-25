@@ -27,9 +27,16 @@ def check_sudoku(sudoku):
     '''
     for lo_op in sudoku:
         boolean = is_line(lo_op)
-        if boolean:
-            return True
-
+        if not boolean:
+            return False
+    for lo_op in sudoku:
+        if len(lo_op) == 9:
+            li_st = []
+            for in_loop in lo_op:
+                li_st.append(in_loop)
+            boolean = is_line(lo_op)
+            if not boolean:
+                return False
 def main():
     '''
         main function to read input sudoku from console
