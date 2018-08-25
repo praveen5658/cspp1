@@ -10,6 +10,7 @@
 def is_line(li_st):
     sample_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
     sample_dictionary = {}
+    print(li_st)
     for lo_op in li_st:
         if lo_op in sample_list:
             if lo_op not in sample_dictionary:
