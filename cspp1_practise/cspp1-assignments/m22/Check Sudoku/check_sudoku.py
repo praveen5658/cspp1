@@ -35,6 +35,7 @@ def check_sudoku(sudoku):
             li_st = []
             for in_loop in lo_op:
                 li_st.append(in_loop)
+            print(li_st)
             boolean = is_line(lo_op)
             if not boolean:
                 return False
