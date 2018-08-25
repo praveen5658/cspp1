@@ -18,13 +18,14 @@ def tokenize(string):
     '''Tokens the words'''
     dictionary = {}
     final_string = clean_string(string)
-    print(final_string)
+    # print(final_string)
     li_st = final_string.split()
-    for lo_op in li_st:
-        if lo_op not in dictionary:
-            dictionary[lo_op] = 1
+    le_n = len(li_st)
+    for lo_op in range(le_n - 1):
+        if li_st[lo_op] not in dictionary:
+            dictionary[li_st[lo_op]] = 1
         else:
-            dictionary[lo_op] += 1
+            dictionary[li_st[lo_op]] += 1
     return dictionary       
 def main():
     '''Main Function'''
@@ -32,6 +33,7 @@ def main():
     num_ber = int(input())
     for lo_op in range(num_ber):
         string += input()
+        string += ' '
     print(tokenize(string))
 
 if __name__ == '__main__':
