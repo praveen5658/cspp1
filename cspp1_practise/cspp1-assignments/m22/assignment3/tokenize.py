@@ -10,16 +10,14 @@ def clean_string(string):
     for lo_op in string:
         if ('a' <= lo_op <= 'z' or
                 'A' <= lo_op <= 'Z' or
-                lo_op == ''):
+                lo_op = ''):
             sample_string += lo_op
     return sample_string
 def tokenize(string):
     '''Tokens the words'''
     dictionary = {}
     final_string = clean_string(string)
-    print(final_string)
     li_st = final_string.split()
-    print(li_st)
     for lo_op in li_st:
         if lo_op not in dictionary:
             dictionary[lo_op] = 1
