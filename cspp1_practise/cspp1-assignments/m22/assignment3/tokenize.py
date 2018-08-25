@@ -26,7 +26,7 @@ def tokenize(string):
             dictionary[li_st[lo_op]] = 1
         else:
             dictionary[li_st[lo_op]] += 1
-    return dictionary 
+    return dictionary
 def main():
     '''Main Function'''
     string = ''
