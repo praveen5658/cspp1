@@ -8,7 +8,7 @@ Date: 25-08-2018
 
 def print_dictionary(dictionary):
     '''Sub Function'''
-    li_st = list(dictionary.keys()).sorted()
+    li_st = sorted(list(dictionary.keys()))
     sample_dictionary = {}
     for lo_op in li_st:
         print(lo_op, " - ", dictionary[lo_op])
