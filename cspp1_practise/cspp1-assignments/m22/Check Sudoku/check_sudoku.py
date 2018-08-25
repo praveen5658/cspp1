@@ -10,14 +10,14 @@
 def is_line(li_st):
     sample_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
     sample_dictionary = {}
-    print(li_st)
+    # print(li_st)
     for lo_op in li_st:
         if lo_op in sample_list:
             if lo_op not in sample_dictionary:
                 sample_dictionary[lo_op] = 1
             else:
                 return False
-    print(set(list((sample_dictionary.keys()))))
+    # print(set(list((sample_dictionary.keys()))))
     le_n = len(set(sample_dictionary.keys()))
     if le_n == 9:
         return True
@@ -36,7 +36,7 @@ def check_sudoku(sudoku):
             li_st = []
             for in_loop in range(9):
                 li_st.append(str(sudoku[in_loop][lo_op]))
-            print(li_st)
+            # print(li_st)
             boolean = is_line(li_st)
             if not boolean:
                 return False
