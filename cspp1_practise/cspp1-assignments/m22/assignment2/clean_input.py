@@ -1,5 +1,5 @@
 '''
-Write a function to clean up a given string by removing the special characters and retain 
+Write a function to clean up a given string by removing the special characters and retain
 alphabets in both upper and lower case and numbers.
 Author : Praveen
 Date : 25-08-2018
