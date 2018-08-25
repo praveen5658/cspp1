@@ -12,6 +12,7 @@ def frequency_graph(dictionary):
         hash_string = ''
         for in_loop in range(dictionary[lo_op]):
             hash_string += '#'
+            in_loop += 1
         print(lo_op, "-", hash_string)
 
 def main():
