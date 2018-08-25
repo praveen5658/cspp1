@@ -18,6 +18,7 @@ def tokenize(string):
     '''Tokens the words'''
     dictionary = {}
     final_string = clean_string(string)
+    print(final_string)
     li_st = final_string.split()
     for lo_op in li_st:
         if lo_op not in dictionary:
