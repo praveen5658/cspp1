@@ -11,7 +11,7 @@ def print_dictionary(dictionary):
     li_st = sorted(list(dictionary.keys()))
     sample_dictionary = {}
     for lo_op in li_st:
-        print(lo_op, " - ", dictionary[lo_op])
+        print(lo_op, "-", dictionary[lo_op])
 def main():
     '''Main Function'''
     dictionary = eval(input())
