@@ -16,7 +16,7 @@ def is_line(li_st):
                 sample_dictionary[lo_op] = 1
             else:
                 return False
-    le_n = len(list(sample_dictionary.keys()))
+    le_n = len(set(sample_dictionary.keys()))
     if le_n == 9:
         return True
     return False
