@@ -31,7 +31,7 @@ def check_sudoku(sudoku):
         if not boolean:
             return False
     for lo_op in range(9):
-        if len(lo_op) == 9:
+        if len(sudoku[lo_op]) == 9:
             li_st = []
             for in_loop in range(9):
                 li_st.append(sudoku[in_loop][lo_op])
