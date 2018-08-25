@@ -17,7 +17,7 @@ def tokenize(string):
     '''Tokens the words'''
     dictionary = {}
     final_string = clean_string(string)
-    print(li_st)
+    print(final_string)
     li_st = final_string.split()
     print(li_st)
     for lo_op in li_st:
