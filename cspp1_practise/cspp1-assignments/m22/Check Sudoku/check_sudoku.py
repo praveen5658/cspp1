@@ -23,6 +23,7 @@ def first_row(sudoku):
             li_st3.append(sudoku[lo_op][in_loop])
     if not (is_line(li_st1) and is_line(li_st2) and is_line(li_st3)):
         return False
+    return True
 def second_row(sudoku):
     '''Sub function'''
     li_st1 = []
@@ -37,6 +38,7 @@ def second_row(sudoku):
             li_st3.append(sudoku[lo_op][in_loop])
     if not (is_line(li_st1) and is_line(li_st2) and is_line(li_st3)):
         return False
+    return True
 def third_row(sudoku):
     '''Sub function'''
     li_st1 = []
@@ -51,6 +53,7 @@ def third_row(sudoku):
             li_st3.append(sudoku[lo_op][in_loop])
     if not (is_line(li_st1) and is_line(li_st2) and is_line(li_st3)):
         return False
+    return True
 def is_line(li_st):
     '''Sub function'''
     sample_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
