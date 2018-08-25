@@ -37,18 +37,19 @@ def check_sudoku(sudoku):
             boolean = is_line(lo_op)
             if not boolean:
                 return False
-    # li_st1 = []
-    # li_st2 = []
-    # li_st3 = []
-    # for lo_op in range(0, 3):
-    #     for in_loop in range(0, 3):
-    #         li_st1.append(sudoku[lo_op][in_loop])
-    #     for in_loop in range(3, 6):
-    #         li_st2.append(sudoku[lo_op][in_loop])
-    #     for in_loop in range(6, 9):
-    #         li_st3.append(sudoku[lo_op][in_loop])
-    # if not is_line(li_st1) and is_line(li_st2) and is_line(li_st3):
-    #     return False
+    li_st1 = []
+    li_st2 = []
+    li_st3 = []
+    for lo_op in range(0, 3):
+        for in_loop in range(0, 3):
+            li_st1.append(sudoku[lo_op][in_loop])
+        for in_loop in range(3, 6):
+            li_st2.append(sudoku[lo_op][in_loop])
+        for in_loop in range(6, 9):
+            li_st3.append(sudoku[lo_op][in_loop])
+    print(li_st1, li_st2, li_st3)
+    if not is_line(li_st1) and is_line(li_st2) and is_line(li_st3):
+        return False
     # li_st1 = []
     # li_st2 = []
     # li_st3 = []
