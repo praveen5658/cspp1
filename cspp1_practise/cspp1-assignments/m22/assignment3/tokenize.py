@@ -21,7 +21,7 @@ def tokenize(string):
     # print(final_string)
     li_st = final_string.split()
     le_n = len(li_st)
-    for lo_op in range(le_n - 1):
+    for lo_op in range(le_n):
         if li_st[lo_op] not in dictionary:
             dictionary[li_st[lo_op]] = 1
         else:
