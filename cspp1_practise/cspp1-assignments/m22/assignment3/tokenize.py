@@ -18,6 +18,7 @@ def tokenize(string):
     dictionary = {}
     final_string = clean_string(string)
     li_st = final_string.split()
+    print(li_st)
     for lo_op in li_st:
         if lo_op not in dictionary:
             dictionary[lo_op] = 1
