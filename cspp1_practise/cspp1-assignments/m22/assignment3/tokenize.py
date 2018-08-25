@@ -26,7 +26,7 @@ def tokenize(string):
             dictionary[li_st[lo_op]] = 1
         else:
             dictionary[li_st[lo_op]] += 1
-    return dictionary       
+    return dictionary 
 def main():
     '''Main Function'''
     string = ''
@@ -34,6 +34,7 @@ def main():
     for lo_op in range(num_ber):
         string += input()
         string += ' '
+        lo_op += 1
     print(tokenize(string))
 
 if __name__ == '__main__':
