@@ -10,6 +10,7 @@ def clean_string(string):
     for lo_op in string:
         if ('a' <= lo_op <= 'z' or
                 'A' <= lo_op <= 'Z' or
+                '0' <= lo_op <= '9' or
                 lo_op == ' '):
             sample_string += lo_op
     return sample_string
