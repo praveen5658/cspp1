@@ -30,11 +30,11 @@ def check_sudoku(sudoku):
         boolean = is_line(lo_op)
         if not boolean:
             return False
-    for lo_op in sudoku:
+    for lo_op in range(9):
         if len(lo_op) == 9:
             li_st = []
-            for in_loop in lo_op:
-                li_st.append(in_loop)
+            for in_loop in range(9):
+                li_st.append(sudoku[in_loop][lo_op])
             print(li_st)
             boolean = is_line(lo_op)
             if not boolean:
