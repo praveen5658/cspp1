@@ -6,8 +6,11 @@
 
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
+    Author : Praveen
+    Date : 25-08-2018
 '''
 def is_line(li_st):
+    '''Sub function'''
     sample_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
     sample_dictionary = {}
     # print(li_st)
@@ -91,6 +94,7 @@ def main():
         # read a line, split it on SPACE and append row to list
         row = input().split(' ')
         sudoku.append(row)
+        i += 1
     # call solution function and print result to console
     print(check_sudoku(sudoku))
 
