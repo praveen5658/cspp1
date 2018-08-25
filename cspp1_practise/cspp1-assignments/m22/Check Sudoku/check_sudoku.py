@@ -9,6 +9,45 @@
     Author : Praveen
     Date : 25-08-2018
 '''
+def first_row(sudoku):
+    li_st1 = []
+    li_st2 = []
+    li_st3 = []
+    for lo_op in range(0, 3):
+        for in_loop in range(0, 3):
+            li_st1.append(sudoku[lo_op][in_loop])
+        for in_loop in range(3, 6):
+            li_st2.append(sudoku[lo_op][in_loop])
+        for in_loop in range(6, 9):
+            li_st3.append(sudoku[lo_op][in_loop])
+    if not (is_line(li_st1) and is_line(li_st2) and is_line(li_st3)):
+        return False
+def second_row(sudoku):
+    li_st1 = []
+    li_st2 = []
+    li_st3 = []
+    for lo_op in range(3, 6):
+        for in_loop in range(0, 3):
+            li_st1.append(sudoku[lo_op][in_loop])
+        for in_loop in range(3, 6):
+            li_st2.append(sudoku[lo_op][in_loop])
+        for in_loop in range(6, 9):
+            li_st3.append(sudoku[lo_op][in_loop])
+    if not (is_line(li_st1) and is_line(li_st2) and is_line(li_st3)):
+        return False
+def third_row(sudoku):
+    li_st1 = []
+    li_st2 = []
+    li_st3 = []
+    for lo_op in range(6, 9):
+        for in_loop in range(0, 3):
+            li_st1.append(sudoku[lo_op][in_loop])
+        for in_loop in range(3, 6):
+            li_st2.append(sudoku[lo_op][in_loop])
+        for in_loop in range(6, 9):
+            li_st3.append(sudoku[lo_op][in_loop])
+    if not (is_line(li_st1) and is_line(li_st2) and is_line(li_st3)):
+        return False
 def is_line(li_st):
     '''Sub function'''
     sample_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
@@ -43,41 +82,11 @@ def check_sudoku(sudoku):
             boolean = is_line(li_st)
             if not boolean:
                 return False
-    li_st1 = []
-    li_st2 = []
-    li_st3 = []
-    for lo_op in range(0, 3):
-        for in_loop in range(0, 3):
-            li_st1.append(sudoku[lo_op][in_loop])
-        for in_loop in range(3, 6):
-            li_st2.append(sudoku[lo_op][in_loop])
-        for in_loop in range(6, 9):
-            li_st3.append(sudoku[lo_op][in_loop])
-    if not (is_line(li_st1) and is_line(li_st2) and is_line(li_st3)):
+    if first_row(sudoku) == False:
         return False
-    li_st1 = []
-    li_st2 = []
-    li_st3 = []
-    for lo_op in range(3, 6):
-        for in_loop in range(0, 3):
-            li_st1.append(sudoku[lo_op][in_loop])
-        for in_loop in range(3, 6):
-            li_st2.append(sudoku[lo_op][in_loop])
-        for in_loop in range(6, 9):
-            li_st3.append(sudoku[lo_op][in_loop])
-    if not (is_line(li_st1) and is_line(li_st2) and is_line(li_st3)):
+    if second_row(sudoku) == False:
         return False
-    li_st1 = []
-    li_st2 = []
-    li_st3 = []
-    for lo_op in range(6, 9):
-        for in_loop in range(0, 3):
-            li_st1.append(sudoku[lo_op][in_loop])
-        for in_loop in range(3, 6):
-            li_st2.append(sudoku[lo_op][in_loop])
-        for in_loop in range(6, 9):
-            li_st3.append(sudoku[lo_op][in_loop])
-    if not (is_line(li_st1) and is_line(li_st2) and is_line(li_st3)):
+    if third_row(sudoku) == False:
         return False
     return True
 def main():
@@ -85,7 +94,6 @@ def main():
         main function to read input sudoku from console
         call check_sudoku function and print the result to console
     '''
-    
     # initialize empty list
     sudoku = []
 
