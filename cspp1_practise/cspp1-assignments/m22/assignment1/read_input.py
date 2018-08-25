@@ -10,5 +10,6 @@ def main():
     num_ber = int(input())
     for lo_op in range(num_ber):
         print(input())
+        lo_op += 1
 if __name__ == '__main__':
     main()
